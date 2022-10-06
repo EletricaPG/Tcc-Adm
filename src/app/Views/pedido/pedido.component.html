@@ -1,0 +1,77 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<app-menu></app-menu>
+<main>
+    <div class="table-title">
+        <h2>Pedido Cliente</h2>
+        <a class="btn-detalepedido" href="detalepedido">
+          Clique para ver detales do pedido
+         </a>
+         
+        <a href="#"
+         class="btn btn-sucess"data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <i class="fa fa-plus" aria-hidden="true"></i>
+            New
+        </a>
+    </div>
+
+    <table class="tabela">
+        <thead>
+            <tr>
+                <th>Valor </th>
+                <th>Data e hora</th>
+                <th>Forma de pagamento</th>
+                <th>Cliente</th>
+                <th>Opções</th>
+            </tr>
+        </thead>
+        <tbody class="linhas">
+          <tr>
+                <th>Valor </th>
+                <th>Data e hora</th>
+                <th>Forma de pagamento</th>
+                <th>Cliente</th>
+            <th>
+              <button type="submit" class="btn-editar"><i class="fa fa-pencil" aria-hidden="true"></i></button>
+              <button type="submit" class="btn-excluir"><i class="fa fa-trash" aria-hidden="true"></i></button>
+            </th>
+          </tr>
+            
+        </tbody>
+        <tbody class="linhas">
+            <tr>
+            <th>Valor </th>
+            <th>Data e hora</th>
+            <th>Forma de pagamento</th>
+            <th>Cliente</th>
+        <th>
+          <button type="submit" class="btn-editar"><i class="fa fa-pencil" aria-hidden="true"></i></button>
+          <button type="submit" class="btn-excluir"><i class="fa fa-trash" aria-hidden="true"></i></button>
+        </th>
+              </tr>
+         
+      </tbody>
+    </table>
+   
+    
+
+<!-- Modal -->
+<div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog ">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Novo Pedido</h5>
+      </div>
+      <div class="modal-body">
+        <input type="number" name="numbValor" id="" class="DescCat" placeholder="Valor:">
+        <input type="datetime-local" name="Data" id="" class="DescCat" >
+        <input type="text" name="txtFormaPagamento" id="" class="DescCat" placeholder="Forma de pagamento:">
+        <input type="text" name="txtClient" id="" class="DescCat" placeholder="Cliente:">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="fechar btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+        <button type="button" class="salvar btn btn-primary">Salvar</button>
+      </div>
+    </div>
+  </div>
+</div>
+</main>

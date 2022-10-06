@@ -1,0 +1,74 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<app-menu></app-menu>
+<main>
+    <div class="table-title">
+        <h2>Compra Fornecedor </h2>
+
+         <a class="btn-detalecompra" href="detalecompra">
+          Clique para ver detales da compra
+         </a>
+         
+
+        <a href="#"
+         class="btn btn-sucess"data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <i class="fa fa-plus" aria-hidden="true"></i>
+            New
+        </a>
+    </div>
+
+    <table class="tabela">
+        <thead>
+            <tr>
+               <th>Data e hora</th>
+               <th>Valor Total</th>
+                <th>Produto</th>
+                <th>Fornecedor</th>
+                <th>Opções</th>
+            </tr>
+        </thead>
+        <tbody class="linhas" *ngIf="categories && categories.length">
+          <tr *ngFor="let buy of categories">
+             <!-- <th> {{buy.id}}</th> -->
+             <th>{{buy.date}}</th>
+             <th>{{buy.valueTotal}}</th>
+             <th>{{buy.idProduct}}</th>
+             <th>{{buy.idProvider}}</th>
+            
+            <th>
+              <button type="submit" class="btn-editar"><i class="fa fa-pencil" aria-hidden="true"></i></button>
+              <button type="submit" class="btn-excluir"><i class="fa fa-trash" aria-hidden="true"></i></button>
+            </th>
+          </tr>
+            
+        </tbody>
+        
+    </table>
+   
+    
+
+<!-- Modal -->
+<div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog ">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Nova compra</h5>
+      </div>
+      <div class="modal-body">
+        <input type="number" name="numbvalortotal" id="" class="DescCat" placeholder="Valor Total:"[(ngModel)]="valortotal">
+         <input type="datetime-local" name="data" id="" class="DescCat" [(ngModel)]="date">
+        <input type="text" name="txtproduto" id="" class="DescCat" placeholder="Produto:"[(ngModel)]="produto"> 
+        <input type="text" name="txtfornecedor" id="" class="DescCat" placeholder="Fornecedor:"[(ngModel)]="fornecedor"> 
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="fechar btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+        <button type="button" class="salvar btn btn-primary"(click)="postCategories()">Salvar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+</main>
